@@ -1,8 +1,14 @@
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home/Home";
+import { WebRoutes } from "./routes/WebRoutes";
+import Auth from "./pages/Auth/Auth";
+
 const App = () => {
   return (
-    <div className="text-red-500">
-      App
-    </div>
+    <Routes>
+      <Route path={WebRoutes.HOME()} element={<Home/>} />
+      <Route path={WebRoutes.AUTH()} element={<Auth/>} />
+    </Routes>
   )
 }
 
