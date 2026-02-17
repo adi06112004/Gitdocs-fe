@@ -1,19 +1,34 @@
-import { useState } from "react";
-import SignIn from "./SignIn";
-import CreateAccount from "./CreateAccount";
+import { Outlet } from "react-router-dom";
+import "./Auth.css";
 
 const Auth = () => {
-  const [isLogin, setIsLogin] = useState(true);
-
   return (
-    <div>
-      {isLogin ? <SignIn /> : <CreateAccount />}
+    <div className="auth-layout">
+      <header className="auth-header">
+        <div className="auth-logo">
+          <div className="logo-box"></div>
+          <span>GitDoc</span>
+        </div>
 
-      <div style={{ textAlign: "center" }}>
-        <button onClick={() => setIsLogin(!isLogin)}>
-          {isLogin ? "Create new account" : "Already have an account"}
-        </button>
-      </div>
+        <nav className="auth-nav">
+          <a href="#">Documentation</a>
+          <a href="#">API</a>
+          <a href="#">Changelog</a>
+          <div className="status-pill">Systems Operational</div>
+        </nav>
+      </header>
+
+      <main className="auth-main">
+        <Outlet />
+      </main>
+
+      <footer className="auth-footer">
+        <a href="#">Privacy Policy</a>
+        <span>•</span>
+        <a href="#">Terms of Service</a>
+        <span>•</span>
+        <a href="#">Help Center</a>
+      </footer>
     </div>
   );
 };

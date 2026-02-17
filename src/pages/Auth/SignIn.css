@@ -1,113 +1,143 @@
 .auth-wrapper {
-  min-height: 100vh;
-  background: radial-gradient(circle at top, #1a0f2e, #05010d);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.breadcrumb {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #9aa0b5;
+  margin-bottom: 20px;
 }
 
 .auth-card {
-  width: 380px;
-  background: rgba(18, 11, 42, 0.85);
-  backdrop-filter: blur(12px);
-  border-radius: 20px;
-  padding: 40px 30px;
-  color: white;
-  box-shadow: 0 0 80px rgba(120, 0, 255, 0.45);
-  border: 1px solid rgba(255,255,255,0.05);
+  width: 420px;
+  padding: 40px;
+  border-radius: 18px;
+  background: rgba(20, 20, 40, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(30px);
+  box-shadow: 0 0 60px rgba(108, 59, 255, 0.15);
 }
 
-
-.auth-header h2 {
-  margin: 0;
-  font-size: 22px;
+.auth-header-content h2 {
+  font-size: 26px;
+  margin-bottom: 8px;
 }
 
-.auth-header p {
+.auth-header-content p {
   font-size: 14px;
-  color: #aaa;
-  margin-top: 6px;
+  color: #9aa0b5;
+  margin-bottom: 30px;
 }
 
 .auth-tabs {
   display: flex;
-  background: #1b1236;
+  background: rgba(255, 255, 255, 0.03);
   border-radius: 10px;
-  margin: 20px 0;
+  padding: 4px;
+  margin-bottom: 25px;
 }
 
 .auth-tabs button {
   flex: 1;
   padding: 10px;
-  background: transparent;
   border: none;
-  color: #bbb;
+  background: transparent;
+  border-radius: 8px;
   cursor: pointer;
-  border-radius: 10px;
+  color: #9aa0b5;
+  transition: 0.3s;
 }
 
-.auth-tabs .active {
-  background: #2b1a57;
+.auth-tabs button.active {
+  background: rgba(108, 59, 255, 0.2);
   color: white;
 }
 
 .auth-input {
   width: 100%;
-  padding: 12px;
-  margin: 10px 0;
+  padding: 14px;
+  margin-bottom: 18px;
   border-radius: 10px;
-  border: none;
-  background: #1c1235;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.04);
   color: white;
   outline: none;
+  transition: 0.3s;
+}
+
+.auth-input:focus {
+  border-color: #6c3bff;
+  box-shadow: 0 0 0 2px rgba(108, 59, 255, 0.2);
 }
 
 .forgot {
   text-align: right;
   font-size: 12px;
-  color: #7a6cff;
+  color: #8a63ff;
   margin-bottom: 10px;
   cursor: pointer;
 }
 
-.auth-main-btn {
+.primary-btn {
   width: 100%;
-  padding: 12px;
-  border-radius: 12px;
+  padding: 14px;
   border: none;
-  background: linear-gradient(90deg, #6a00ff, #9b00ff);
+  border-radius: 10px;
+  background: linear-gradient(135deg, #6c3bff, #8a63ff);
   color: white;
-  font-weight: bold;
+  font-weight: 600;
   cursor: pointer;
+  transition: 0.3s;
   margin-top: 10px;
 }
 
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(108, 59, 255, 0.5);
+}
+
 .divider {
-  text-align: center;
-  margin: 20px 0;
+  margin: 30px 0 20px;
   font-size: 12px;
-  color: #888;
+  color: #9aa0b5;
+  position: relative;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 35%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
 }
 
 .social-buttons {
   display: flex;
-  gap: 10px;
+  gap: 12px;
 }
 
 .social-btn {
   flex: 1;
   padding: 10px;
   border-radius: 10px;
-  border: 1px solid #333;
-  background: #120b2a;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.04);
   color: white;
   cursor: pointer;
+  transition: 0.3s;
 }
 
-.auth-footer {
-  margin-top: 20px;
-  font-size: 11px;
-  text-align: center;
-  color: #777;
+.social-btn:hover {
+  background: rgba(108, 59, 255, 0.15);
 }
