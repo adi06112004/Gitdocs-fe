@@ -1,9 +1,58 @@
+import { useState } from "react";
+import "./SignIn.css";
+
 const SignIn = () => {
-    return(
-        <div>
-            SignIn
+  const [tab, setTab] = useState("signin");
+
+  return (
+    <div className="auth-wrapper">
+      <div className="breadcrumb">AUTH &gt; LOGIN</div>
+
+      <div className="auth-card">
+        <div className="auth-header-content">
+          <h2>Commit your thoughts.</h2>
+          <p>Sign in to manage your versioned documentation.</p>
         </div>
-    )
-}
+
+        <div className="auth-tabs">
+          <button
+            className={tab === "signin" ? "active" : ""}
+            onClick={() => setTab("signin")}
+          >
+            Sign In
+          </button>
+          <button
+            className={tab === "signup" ? "active" : ""}
+            onClick={() => setTab("signup")}
+          >
+            Create Account
+          </button>
+        </div>
+
+        {tab === "signup" && (
+          <input type="text" placeholder="Name" className="auth-input" />
+        )}
+
+        <input type="email" placeholder="Email address" className="auth-input" />
+        <input type="password" placeholder="Password" className="auth-input" />
+
+        {tab === "signin" && (
+          <div className="forgot">Forgot password?</div>
+        )}
+
+        <button className="primary-btn">
+          {tab === "signin" ? "Sign In →" : "Create Account →"}
+        </button>
+
+        <div className="divider">OR CONTINUE WITH</div>
+
+        <div className="social-buttons">
+          <button className="social-btn">GitHub</button>
+          <button className="social-btn">Google</button>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default SignIn;
