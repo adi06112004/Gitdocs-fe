@@ -3,6 +3,8 @@ import Home from "./pages/Home/Home";
 import { WebRoutes } from "./routes/WebRoutes";
 import Auth from "./pages/Auth/Auth";
 import Navbar from "./components/Navbar";
+import SignIn from "./pages/Auth/SignIn";
+import CreateAccount from "./pages/Auth/CreateAccount";
 
 const App = () => {
   return (
@@ -15,5 +17,3 @@ const App = () => {
     </>
   )
 }
-
-export default App;
