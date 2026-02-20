@@ -1,5 +1,5 @@
-import { Outlet } from "react-router-dom";
 import "./Auth.css";
+import SignIn from "./SignIn";
 
 const Auth = () => {
   return (
@@ -19,7 +19,7 @@ const Auth = () => {
       </header>
 
       <main className="auth-main">
-        <Outlet />
+        <SignIn/>
       </main>
 
       <footer className="auth-footer">
